@@ -19,6 +19,11 @@ function subtotal() {
   const economyCount = getCount('economy');
   const subtotal = firstClassCount * 150 + economyCount * 100;
   document.getElementById('subtotal').innerText = subtotal;
+
+  const tax = Math.round((subtotal / 100) * (100 + 10) - subtotal);
+  document.getElementById('tax').innerText = tax;
+
+  document.getElementById('total').innerText = subtotal + tax;
 }
 
 function getCount(ticket) {
