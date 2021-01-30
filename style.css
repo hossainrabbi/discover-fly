@@ -12,6 +12,7 @@ body {
   background-position: center center;
   background-attachment: scroll;
   background-size: cover;
+  position: relative;
 }
 
 nav {
@@ -131,4 +132,46 @@ a.active {
 .amount {
   display: flex;
   justify-content: space-between;
+}
+
+.full-amount-area {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #00000067;
+}
+
+.full-amount-content {
+  color: #ffffff;
+  background-color: #3352f2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.full-amount-content tr td {
+  padding: 5px 2px;
+}
+
+.full-amount-content .hide-btn {
+  text-align: center;
+}
+.full-amount-content .hide-btn button {
+  font-size: 18px;
+  color: #2ef90a;
+  border: 0;
+  background: transparent;
+  padding: 5px;
+  border-radius: 5px;
+  outline: 0;
+  cursor: pointer;
+  margin-top: 10px;
 }

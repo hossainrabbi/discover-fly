@@ -27,134 +27,165 @@
       </nav>
     </header>
 
-    <!--Booking Section-->
-    <main class="main-content container">
-      <div class="booking-form">
-        <h3>Booking Flights</h3>
-        <div class="input-group">
-          <label>Flying From</label>
-          <input
-            class="inp-style"
-            type="text"
-            placeholder="Dhake, Bangladesh"
-          />
-        </div>
-        <div class="input-group">
-          <label>Flying To</label>
-          <input
-            class="inp-style"
-            type="text"
-            placeholder="New York, United States"
-          />
-        </div>
-        <div class="inputs">
+    <main>
+      <!--Booking Section-->
+      <section class="main-content container">
+        <div class="booking-form">
+          <h3>Booking Flights</h3>
           <div class="input-group">
-            <label>Departure</label>
-            <input class="inp-style" type="date" />
-          </div>
-          <div class="input-group">
-            <label>Return</label>
-            <input class="inp-style" type="date" />
-          </div>
-        </div>
-        <div class="input-group f-class">
-          <div>
-            <label>First Class ($150)</label>
+            <label>Flying From</label>
             <input
-              id="first-class-input"
-              class="inp-style inp-width"
-              type="number"
-              value="0"
+              class="inp-style"
+              type="text"
+              placeholder="Dhake, Bangladesh"
             />
           </div>
-          <div class="plus-minus-btn">
-            <button
-              onclick="handleFlyTicket('first-class', true)"
-              type="button"
-              class="plus-btn"
-            >
-              +
-            </button>
-            <button
-              onclick="handleFlyTicket('first-class', false)"
-              type="button"
-              class="minus-btn"
-            >
-              -
-            </button>
-          </div>
-        </div>
-
-        <div class="input-group f-class">
-          <div>
-            <label>Economy ($100)</label>
+          <div class="input-group">
+            <label>Flying To</label>
             <input
-              id="economy-input"
-              class="inp-style inp-width"
-              type="number"
-              value="0"
+              class="inp-style"
+              type="text"
+              placeholder="New York, United States"
             />
           </div>
-          <div class="plus-minus-btn">
-            <button
-              onclick="handleFlyTicket('economy', true)"
-              type="button"
-              class="plus-btn"
-            >
-              +
-            </button>
-            <button
-              onclick="handleFlyTicket('economy', false)"
-              type="button"
-              class="minus-btn"
-            >
-              -
-            </button>
-          </div>
-        </div>
-        <div class="calculations">
-          <div class="amount">
-            <div class="left">
-              <p>Subtotal</p>
+          <div class="inputs">
+            <div class="input-group">
+              <label>Departure</label>
+              <input class="inp-style" type="date" />
             </div>
-            <div class="right">
-              <p>$ <span id="subtotal">0</span></p>
+            <div class="input-group">
+              <label>Return</label>
+              <input class="inp-style" type="date" />
+            </div>
+          </div>
+          <div class="input-group f-class">
+            <div>
+              <label>First Class ($150)</label>
+              <input
+                id="first-class-input"
+                class="inp-style inp-width"
+                type="number"
+                value="0"
+              />
+            </div>
+            <div class="plus-minus-btn">
+              <button
+                onclick="handleFlyTicket('first-class', true)"
+                type="button"
+                class="plus-btn"
+              >
+                +
+              </button>
+              <button
+                onclick="handleFlyTicket('first-class', false)"
+                type="button"
+                class="minus-btn"
+              >
+                -
+              </button>
             </div>
           </div>
 
-          <div class="amount">
-            <div class="left">
-              <p>Charge 10% VAT</p>
+          <div class="input-group f-class">
+            <div>
+              <label>Economy ($100)</label>
+              <input
+                id="economy-input"
+                class="inp-style inp-width"
+                type="number"
+                value="0"
+              />
             </div>
-            <div class="right">
-              <p>$ <span id="tax">0</span></p>
+            <div class="plus-minus-btn">
+              <button
+                onclick="handleFlyTicket('economy', true)"
+                type="button"
+                class="plus-btn"
+              >
+                +
+              </button>
+              <button
+                onclick="handleFlyTicket('economy', false)"
+                type="button"
+                class="minus-btn"
+              >
+                -
+              </button>
             </div>
           </div>
-          <hr />
-          <div class="amount">
-            <div class="left">
-              <h4>Total</h4>
+          <div class="calculations">
+            <div class="amount">
+              <div class="left">
+                <p>Subtotal</p>
+              </div>
+              <div class="right">
+                <p>$<span id="subtotal">0</span></p>
+              </div>
             </div>
-            <div class="right">
-              <p>$ <span id="total">0</span></p>
-            </div>
-          </div>
-        </div>
-        <button class="btn-style">Book Now</button>
-      </div>
 
-      <div class="booking-content">
-        <h1>
-          discover <br />
-          around the world
-        </h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident
-          voluptatibus quam fuga laborumalias veniam libero autem quasi maxime
-          ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise
-          voluptatibus quam
-        </p>
-      </div>
+            <div class="amount">
+              <div class="left">
+                <p>Charge 10% VAT</p>
+              </div>
+              <div class="right">
+                <p>$<span id="tax">0</span></p>
+              </div>
+            </div>
+            <hr />
+            <div class="amount">
+              <div class="left">
+                <h4>Total</h4>
+              </div>
+              <div class="right">
+                <p>$<span id="total">0</span></p>
+              </div>
+            </div>
+          </div>
+          <button onclick="orderTicketBtn()" class="btn-style">Book Now</button>
+        </div>
+
+        <div class="booking-content">
+          <h1>
+            discover <br />
+            around the world
+          </h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident
+            voluptatibus quam fuga laborumalias veniam libero autem quasi maxime
+            ullam vero nama imi dolor, architecto ab facilis eaque deserunt
+            nobise voluptatibus quam
+          </p>
+        </div>
+      </section>
+
+      <!-- Extra -->
+      <section class="full-amount-area">
+        <div class="container">
+          <table class="full-amount-content">
+            <tr>
+              <td id="first-class-value">0</td>
+              <td>- First Class Ticket</td>
+              <td>= $<span id="first-class-total">0</span></td>
+            </tr>
+            <tr>
+              <td id="economy-value">0</td>
+              <td>- Economy Ticket</td>
+              <td>= $<span id="economy-total">0</span></td>
+            </tr>
+            <tr>
+              <td colspan="2"><b>Total Amount</b> (+tax)</td>
+              <td>
+                <b>= $<span id="full-amount">0</span></b>
+              </td>
+            </tr>
+            <tr>
+              <td class="hide-btn" colspan="3">
+                <button onclick="popupHide()">Ok</button>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </section>
     </main>
 
     <script src="script.js"></script>
