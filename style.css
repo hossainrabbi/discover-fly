@@ -143,7 +143,6 @@ a.active {
   left: 0;
   background-color: #00000067;
 }
-
 .full-amount-content {
   color: #ffffff;
   background-color: #3352f2;
@@ -156,11 +155,9 @@ a.active {
   font-size: 20px;
   letter-spacing: 1px;
 }
-
 .full-amount-content tr td {
   padding: 5px 2px;
 }
-
 .full-amount-content .hide-btn {
   text-align: center;
 }

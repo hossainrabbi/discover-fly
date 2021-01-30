@@ -19,30 +19,36 @@ function totalAmount() {
   const firstClassCount = getCount('first-class');
   const economyCount = getCount('economy');
   const subtotal = firstClassCount * 150 + economyCount * 100;
-  document.getElementById('subtotal').innerText = subtotal;
+  handleId('subtotal').innerText = subtotal;
 
   const tax = Math.round((subtotal / 100) * (100 + 10) - subtotal);
-  document.getElementById('tax').innerText = tax;
+  handleId('tax').innerText = tax;
 
-  return (document.getElementById('total').innerText = subtotal + tax);
+  return (handleId('total').innerText = subtotal + tax);
 }
 
+// Input ticket handle
 function getCount(ticket) {
   const ticketInput = document.getElementById(ticket + '-input');
   return parseInt(ticketInput.value);
 }
 
-// extra
+// All Amount Calculated for 'Book Now' button
 function fullAmount(ticket, ticketCount) {
   if (ticket == 'first-class') {
-    document.getElementById('first-class-value').innerText = ticketCount;
-    document.getElementById('first-class-total').innerText = ticketCount * 150;
+    handleId('first-class-value').innerText = ticketCount;
+    handleId('first-class-total').innerText = ticketCount * 150;
   }
   if (ticket == 'economy') {
-    document.getElementById('economy-value').innerText = ticketCount;
-    document.getElementById('economy-total').innerText = ticketCount * 100;
+    handleId('economy-value').innerText = ticketCount;
+    handleId('economy-total').innerText = ticketCount * 100;
   }
-  document.getElementById('full-amount').innerText = totalAmount();
+  handleId('full-amount').innerText = totalAmount();
+}
+
+// Id handle function
+function handleId(id) {
+  return document.getElementById(id);
 }
 
 // Display Show and Hide
